@@ -14,7 +14,101 @@
       console.warn(
         "Attention: cette action peut avoir des conséquences imprévues"
       );
-      alert("ceci est une alerte")
+      //alert("ceci est une alerte")
+      //déclaration et affichage des variables
+      var name = "amina";
+      var age = 24;
+      const pi = 3.14;
+      console.log("mon nom est ", name);
+      console.log(name.length);
+      console.log("je m'appelle", name, "et j'ai", age, "ans");
+      console.log("je m'appelle " + name + " et j'ai " + age + " ans");
+      console.log(`je m'appelle ${name} et j'ai ${age} ans`);
+      console.log(pi);
+      //les conditions
+      const time = new Date().getHours();
+      var greeting;
+      if (time < 10) {
+        greeting = "Good morning";
+      } else if (time < 20) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      console.log(greeting);
+
+      const module1 = 9;
+      const module2 = 11;
+      const moyenne = (module1 + module2) / 2;
+      if (moyenne > 10) {
+        console.log("Bravo, vous avez réussi!");
+      } else if (moyenne == 10) {
+        console.log("Passable");
+      } else {
+        console.log("Vous êtes ajourné.");
+      }
+      //comparaison totale et comparaison partielle
+      //comparaison partielle
+      var nombre = "5";
+      if (nombre == 5) {
+        console.log(
+          "comparaison partielle la valeur est égale aprés conversion"
+        );
+      } else {
+        console.log("comparaison partielle la valeur est différente");
+      }
+      //comparaison totale
+      if (nombre === 5) {
+        console.log("comparaison totale la valeur et le type sont égaux");
+      } else {
+        console.log("comparaison totale la valeur ou le type est différent");
+      }
+      //comparaison ternaire
+      nombre == 5
+        ? console.log(
+            "comparaison ternaire la valeur est égale aprés conversion"
+          )
+        : console.log("comparaison ternaire la valeur est différente");
+      //switch case
+      var couleur = "rouge";
+      switch (couleur) {
+        case "rouge":
+          console.log("la couleur est rouge");
+          break;
+        case "bleu":
+          console.log("la couleur est bleu");
+          break;
+        case "vert":
+          console.log("la couleur est vert");
+          break;
+        default:
+          console.log("couleur non reconnue");
+      }
+
+      //les fonctions
+      function salutation() {
+        console.log("Bonjour tout le monde !");
+      }
+      salutation();
+
+      function addition(a, b) {
+        return a + b;
+      }
+      console.log("le résultat de l'addition est :", addition(8, 3));
+
+      function pairImpair(n) {
+        if (n % 2 == 0) {
+          console.log("le nombre n est pair");
+        } else {
+          console.log("le nombre n est impair");
+        }
+      }
+      pairImpair(7);
+      //version ternaire de la fonction pairImpair
+      const n = 10;
+      n % 2 == 0
+        ? console.log("le nombre n est pair")
+        : console.log("le nombre n est impair");
     </script>
   </body>
 </html>
