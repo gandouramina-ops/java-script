@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les Fontions Fléchées</title>
+  </head>
+  <body>
+    <script>
+      function addition(a, b) {
+        return a + b;
+      }
+      console.log("L'addition de a et b est ", addition(1, 8));
+
+      //Les fonctions fléchée
+      const additionFlechee = (a, b) => a + b;
+      console.log("l'addition fléchée de a et b est ", additionFlechee(4, 2));
+
+      function hello() {
+        console.log("Hello World");
+      }
+      hello();
+
+      const helloFlechee = () => console.log("Hello World Fléchée!");
+      helloFlechee();
+
+      function estPair(p) {
+        if (p % 2 == 0) {
+          console.log(p, " est pair");
+        } else {
+          console.log(p, "est impair");
+        }
+      }
+      estPair(3);
+
+      const estPairFlechee = (p) => {
+        if (p % 2 == 0) {
+          console.log(p, " est pair ");
+        } else {
+          console.log(p, "est impair");
+        }
+      };
+      estPairFlechee(100);
+
+      const estPairFLecheeTernaire = (p) => p%2==0 ? console.log(p, " est pair ") : console.log(p, "est impair");
+      estPairFLecheeTernaire(501);
+      
+    </script>
+  </body>
+</html>
