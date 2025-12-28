@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Iterration</title>
+  </head>
+  <body>
+    <h2>Les fonctions d'itération dans le tableau</h2>
+    <p id="demo"></p>
+
+    <script>
+      const numbers = [45, 4, 9, 16, 25];
+      function doubleandlog(num) {
+        console.log(num * 2, "résultat de la fonction doubleandlog");
+      }
+      numbers.forEach(doubleandlog);
+
+      const num = [1, 2, 3, 4, 5];
+      function double(num) {
+        return num * 2;
+      }
+      const doubleNumbers = num.map(double);
+      console.log(doubleNumbers);
+
+      const numbers1 = [1, 2, 3, 4, 5, 6];
+      const filternumbers1 = numbers1.filter((num) => num % 2 === 0);
+      console.log(filternumbers1);
+
+      const numbers2 = [2, 4, 6, 8, 10];
+      const everynumbers2 = numbers2.every((num) => num % 2 === 0);
+      console.log(everynumbers2);
+
+      const fruit = ["pomme", "banane", "orange", "fraise"];
+      const indexofOrange = fruit.indexOf("orange");
+      console.log(indexofOrange);
+
+      const result = fruit.find((f) => f.length > 5);
+      console.log(result); //find retourne uniquement le premier element qui répond à la condition
+
+      const numbers3 = [10, 20, 30, 40, 50];
+      const index = numbers3.findIndex((num) => num > 25);
+      console.log(index);
+
+      
+    </script>
+  </body>
+</html>
