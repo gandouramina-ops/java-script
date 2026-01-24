@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promesse en Java Script</title>
+  </head>
+  <body>
+    <h1>Java Script promise object</h1>
+    <p>
+      les promesse c'est un objet qui relie entre le code de production et le
+      code de consommation
+    </p>
+    <p id="demo"></p>
+
+    <script>
+      function mydisplayer(somme) {
+        document.getElementById("demo").innerHTML = somme;
+      }
+      let mypromise = new Promise(function (myresolve, myreject) {
+        let x = 0;
+        if (x == 0) {
+          myresolve("okey");
+        } else {
+          myreject("error");
+        }
+      });
+
+       // let mypromise = new Promise((myresolve, myreject) => {
+      //   let x = 0;
+      //   if (x == 0) {
+      //     myresolve("okey");
+      //   } else {
+      //     myreject("error");
+      //   }
+      // }); la meme chose avec une fonction flechee
+
+      mypromise.then(
+        function (value) {
+          mydisplayer(value);
+        },
+        function (error) {
+          mydisplayer(error);
+        }
+      );
+    </script>
+  </body>
+</html>

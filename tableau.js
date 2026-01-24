@@ -46,18 +46,19 @@ const x=["banane","orange","pomme","mongue"]
 console.log(x);
 
 x.splice(2,0,"citron","kiwi") //splice permet d'ajouter et de supprimer , le premier parametre(2) indique à quel index ajouter les élements et au premier parametre(0) c'est le nombre d'element à supprimer 
-console.log(x);
+console.log("splice 3 param : ",x);
 x.splice(2,1)
-console.log(x);
+console.log("splice 2param",x);
 
 const y=["fraise","pastèque","poire","mandarine"]
+console.log(y);
 const sliceY=y.slice(2)// il permet de récuperer les element à partir du ième élement (2)
-console.log(sliceY);
+console.log("slice 1param",sliceY);
 
 const z=["fraise","pastèque","poire","mandarine"]
-const sliceZ=z.slice(1,2)
+const sliceZ=z.slice(1,3)
 console.log(z);
-console.log(sliceZ);
+console.log("slice 2 param",sliceZ);
 
 
 
